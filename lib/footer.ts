@@ -1,3 +1,5 @@
+import { litepaperUrl } from "@/lib/links"
+
 export const footerGroups = [
   {
     title: "Product",
@@ -10,7 +12,7 @@ export const footerGroups = [
   {
     title: "Learn",
     links: [
-      { label: "Litepaper", href: "/litepaper" },
+      { label: "Litepaper", href: litepaperUrl },
       { label: "Developers", href: "#developers" },
       { label: "Resources", href: "#resources" },
     ],

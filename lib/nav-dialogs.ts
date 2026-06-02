@@ -1,4 +1,5 @@
 import type { DialogNavItemId } from "@/lib/navigation"
+import { litepaperUrl } from "@/lib/links"
 
 export const navDialogContent: Record<
   Exclude<DialogNavItemId, "contact">,
@@ -32,7 +33,7 @@ export const navDialogContent: Record<
       "Payment rail integrations",
     ],
     action: "Read litepaper",
-    href: "/litepaper",
+    href: litepaperUrl,
   },
   resources: {
     title: "Learn at your own pace",
@@ -40,6 +41,6 @@ export const navDialogContent: Record<
       "Find clear guides for digital dollars, self-custody, mobile money, and getting the most from your Claddar wallet.",
     details: ["Wallet basics", "Security guidance", "Product updates"],
     action: "Read litepaper",
-    href: "/litepaper",
+    href: litepaperUrl,
   },
 }

@@ -3,9 +3,8 @@ import {
   CheckmarkCircle01Icon,
 } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
-import Link from "next/link"
 
-import { Button } from "@/components/ui/button"
+import { ContactDialogButton } from "@/components/navigation/contact-dialog-button"
 import { cn } from "@/lib/utils"
 import type { PricingPlan } from "@/lib/pricing"
 
@@ -46,16 +45,13 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
           </li>
         ))}
       </ul>
-      <Button
-        asChild
+      <ContactDialogButton
         variant={plan.popular ? "default" : "outline"}
         className="mt-auto h-11"
       >
-        <Link href={plan.href}>
-          {plan.cta}
-          <HugeiconsIcon icon={ArrowRight01Icon} data-icon="inline-end" />
-        </Link>
-      </Button>
+        {plan.cta}
+        <HugeiconsIcon icon={ArrowRight01Icon} data-icon="inline-end" />
+      </ContactDialogButton>
     </article>
   )
 }

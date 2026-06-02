@@ -6,9 +6,11 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react"
 import Link from "next/link"
 
+import { ContactDialogButton } from "@/components/navigation/contact-dialog-button"
 import { Button } from "@/components/ui/button"
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect"
 import { Reveal } from "@/components/ui/reveal"
+import { litepaperUrl } from "@/lib/links"
 
 const ctaWords = [
   { text: "Money" },
@@ -31,19 +33,17 @@ export function CtaSection() {
           making everyday money simpler, faster, and truly yours.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Button size="lg" asChild className="h-12 px-5">
-            <Link href="#waitlist">
-              Join waitlist
-              <HugeiconsIcon icon={ArrowRight01Icon} data-icon="inline-end" />
-            </Link>
-          </Button>
+          <ContactDialogButton size="lg" className="h-12 px-5">
+            Join waitlist
+            <HugeiconsIcon icon={ArrowRight01Icon} data-icon="inline-end" />
+          </ContactDialogButton>
           <Button
             size="lg"
             variant="outline"
             asChild
             className="h-12 bg-background/60 px-5 backdrop-blur"
           >
-            <Link href="/litepaper">
+            <Link href={litepaperUrl} rel="noreferrer" target="_blank">
               <HugeiconsIcon icon={BookOpen01Icon} data-icon="inline-start" />
               Read litepaper
             </Link>

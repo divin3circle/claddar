@@ -5,7 +5,6 @@ export type PricingPlan = {
   priceNote: string
   features: string[]
   cta: string
-  href: string
   popular?: boolean
 }
 
@@ -16,7 +15,6 @@ export const pricingPlans: PricingPlan[] = [
     price: "KES 0",
     priceNote: "forever",
     cta: "Get early access",
-    href: "#get-wallet",
     features: [
       "Receive USDC and XLM",
       "Send to Stellar addresses",
@@ -31,7 +29,6 @@ export const pricingPlans: PricingPlan[] = [
     price: "KES 500",
     priceNote: "per month",
     cta: "Join the Pro waitlist",
-    href: "#get-wallet",
     popular: true,
     features: [
       "Everything included in Free",

@@ -7,6 +7,7 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react"
 import Link from "next/link"
 
+import { ContactDialogButton } from "@/components/navigation/contact-dialog-button"
 import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/ui/reveal"
 
@@ -32,16 +33,13 @@ export function HeroContent() {
           simple as mobile banking.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Button
+          <ContactDialogButton
             size="lg"
-            asChild
             className="h-12 bg-foreground px-5 text-background hover:bg-foreground/80"
           >
-            <Link href="#get-wallet">
-              Get early access
-              <HugeiconsIcon icon={ArrowRight01Icon} data-icon="inline-end" />
-            </Link>
-          </Button>
+            Get early access
+            <HugeiconsIcon icon={ArrowRight01Icon} data-icon="inline-end" />
+          </ContactDialogButton>
           <Button
             size="lg"
             variant="outline"
